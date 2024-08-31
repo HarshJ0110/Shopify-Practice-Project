@@ -4,7 +4,13 @@
       "type": "template-404",
       "settings": {
         "title": "404",
+<<<<<<< HEAD
         "subtext_title": "The page you are looking for is not found"
+=======
+        "subtext_title": "The page you are looking for is not found",
+        "button_label": "Back to homepage",
+        "button_url": ""
+>>>>>>> 6d9275148a3df6fc1baf2e5ebf9014b99e3f530c
       }
     }
   },
