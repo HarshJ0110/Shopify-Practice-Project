@@ -29,7 +29,7 @@
           </div>
         </div>
       {% when 'featured_image' %}
-        <div class="max-w-7xl bg-blue-100 rounded-lg mx-2 md:mx-auto overflow-hidden my-4">
+        <div class="max-w-7xl bg-blue-100 rounded-lg mx-5 md:mx-auto overflow-hidden my-4">
           {% if article.image != blank %}
             <img
               src="{{ article.image | img_url: 'large' }}"
@@ -42,7 +42,7 @@
         </div>
       {% when 'article_content' %}
         <div class="flex items-center justify-center">
-          <div class="max-w-7xl">
+          <div class="px-5 md:max-w-7xl">
             {{ article.content }}
           </div>
         </div>
@@ -50,6 +50,11 @@
       {% endcase %}
     {% endfor %}
   </article>
+  {% if blog.comments_enabled? %}
+    Hello
+  {% else %}
+    hi
+  {% endif %}
 
 
   {% schema %}

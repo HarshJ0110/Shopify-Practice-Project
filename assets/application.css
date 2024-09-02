@@ -603,6 +603,11 @@ video {
   margin-right: 0.5rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .-ml-5 {
   margin-left: -1.25rem;
 }
@@ -1034,6 +1039,10 @@ video {
 
   .md\:h-96 {
     height: 24rem;
+  }
+
+  .md\:max-w-7xl {
+    max-width: 80rem;
   }
 
   .md\:flex-1 {
