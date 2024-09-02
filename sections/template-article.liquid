@@ -1,4 +1,4 @@
-<article>
+<article class="py-8">
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'article_title' %}
@@ -29,56 +29,70 @@
           </div>
         </div>
       {% when 'featured_image' %}
-        <img src="{{ article.image | img_url: 'large' }}" alt="{{ article.image.alt }}">
+        <div class="max-w-7xl bg-blue-100 rounded-lg mx-2 md:mx-auto overflow-hidden my-4">
+          {% if article.image != blank %}
+            <img
+              src="{{ article.image | img_url: 'large' }}"
+              alt="{{ article.image.alt }}"
+              class="w-full h-80 md:h-96 object-cover object-center">
+          {% else %}
+            {% assign placeholder_image = 'lifestyle-2' %}
+            {{ placeholder_image | placeholder_svg_tag: 'w-full h-80 md:h-96 object-cover object-center p-5' }}
+          {% endif %}
+        </div>
       {% when 'article_content' %}
-        <div class="">{{ article.content }}</div>
-        {% else %}
-    {% endcase %}
-  {% endfor %}
-</article>
+        <div class="flex items-center justify-center">
+          <div class="max-w-7xl">
+            {{ article.content }}
+          </div>
+        </div>
+    {% else %}
+      {% endcase %}
+    {% endfor %}
+  </article>
 
 
-{% schema %}
-  {
-    "name": "Template Article",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "enable_author",
-        "default": true,
-        "label": "Display Autor Name"
-      }, {
-        "type": "checkbox",
-        "id": "enable_published_date",
-        "default": true,
-        "label": "Display Published Date"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "article_title",
-        "name": "Title",
-        "limit": 1
-      },
-      {
-        "type": "article_author",
-        "name": "Author",
-        "limit": 1
-      },
-      {
-        "type": "article_published_date",
-        "name": "Published Date",
-        "limit": 1
-      },
-      {
-        "type": "featured_image",
-        "name": "Thumbnail",
-        "limit": 1
-      }, {
-        "type": "article_content",
-        "name": "Content",
-        "limit": 1
-      }
-    ]
-  }
-{% endschema %}
+  {% schema %}
+    {
+      "name": "Template Article",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_author",
+          "default": true,
+          "label": "Display Autor Name"
+        }, {
+          "type": "checkbox",
+          "id": "enable_published_date",
+          "default": true,
+          "label": "Display Published Date"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "article_title",
+          "name": "Title",
+          "limit": 1
+        },
+        {
+          "type": "article_author",
+          "name": "Author",
+          "limit": 1
+        },
+        {
+          "type": "article_published_date",
+          "name": "Published Date",
+          "limit": 1
+        },
+        {
+          "type": "featured_image",
+          "name": "Thumbnail",
+          "limit": 1
+        }, {
+          "type": "article_content",
+          "name": "Content",
+          "limit": 1
+        }
+      ]
+    }
+  {% endschema %}
