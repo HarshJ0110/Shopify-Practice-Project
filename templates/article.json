@@ -1,13 +1,17 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "template": {
       "type": "template-article",
       "blocks": {
-        "featured_image_K9iDac": {
-          "type": "featured_image",
-          "settings": {
-          }
-        },
         "article_title_anjanG": {
           "type": "article_title",
           "settings": {
@@ -23,6 +27,11 @@
           "settings": {
           }
         },
+        "featured_image_K9iDac": {
+          "type": "featured_image",
+          "settings": {
+          }
+        },
         "article_content_TEpdEe": {
           "type": "article_content",
           "settings": {
@@ -30,10 +39,10 @@
         }
       },
       "block_order": [
-        "featured_image_K9iDac",
         "article_title_anjanG",
         "article_author_bQN83k",
         "article_published_date_EEGjRn",
+        "featured_image_K9iDac",
         "article_content_TEpdEe"
       ],
       "settings": {
