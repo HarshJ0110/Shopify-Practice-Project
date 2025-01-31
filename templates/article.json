@@ -12,12 +12,12 @@
     "template": {
       "type": "template-article",
       "blocks": {
-        "article_author_bQN83k": {
-          "type": "article_author",
-          "settings": {}
-        },
         "article_title_anjanG": {
           "type": "article_title",
+          "settings": {}
+        },
+        "article_author_bQN83k": {
+          "type": "article_author",
           "settings": {}
         },
         "article_published_date_EEGjRn": {
@@ -34,8 +34,8 @@
         }
       },
       "block_order": [
-        "article_author_bQN83k",
         "article_title_anjanG",
+        "article_author_bQN83k",
         "article_published_date_EEGjRn",
         "featured_image_K9iDac",
         "article_content_TEpdEe"
