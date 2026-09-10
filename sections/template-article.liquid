@@ -67,7 +67,7 @@
   </div>
 
    <div id="comment_form" class="mb-8 w-full flex justify-center">
-     {% form 'new_comment' article %}
+     {% form article %}
        <div class="flex-1 mx-auto items-center justify-center w-1/2 px-4">
          <div class="px-1 md:flex mb-3 gap-40 w-full">
            <div class="px-3 w-full flex flex-col gap-10">
@@ -142,3 +142,13 @@
       ]
     }
   {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% form 'new_comment' article %}"
+  to: "{% form article %}"
+  position: 2372..2390
+{% endcomment %}
